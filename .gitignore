@@ -1,0 +1,14 @@
+.idea
+.vscode
+artifacts/
+cache/
+coverage/
+crytic-corpus/
+crytic-export/
+node_modules/
+typechain-types/
+.env
+.solcx-lock-*
+coverage.json
+mochaOutput.json
+testMatrix.json

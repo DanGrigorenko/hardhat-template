@@ -1,0 +1,46 @@
+{
+    "name": "hardhat-template-contracts",
+    "version": "1.0.0",
+    "description": "Smart contracts for an EVM compatible virtual machine",
+    "scripts": {
+        "prepare": "husky",
+        "format": "prettier --write .",
+        "lint": "eslint .",
+        "compile": "hardhat compile",
+        "check": "hardhat check",
+        "test": "hardhat test --typecheck --bail",
+        "test:ci": "hardhat test --typecheck --parallel",
+        "cover": "rm -rf coverage* && hardhat coverage",
+        "gas": "REPORT_GAS=true hardhat test --typecheck --bail",
+        "size": "hardhat size-contracts",
+        "analyze": "slitherin . --separated",
+        "analyze:ci": "slitherin --separated . --skip-clean --ignore-compile",
+        "clean": "hardhat clean && rm -rf coverage/* cache/* crytic-{corpus,export}/* mochaOutput.json testMatrix.json",
+        "node": "hardhat node",
+        "console": "hardhat console --network localhost"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DanGrigorenko/hardhat-template"
+    },
+    "license": "GPL-3.0",
+    "private": true,
+    "engines": {
+        "node": "^20.9.0",
+        "npm": ">=10.2.0"
+    },
+    "type": "commonjs",
+    "devDependencies": {
+        "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+        "@nomiclabs/hardhat-solhint": "^4.0.1",
+        "dotenv": "^16.4.5",
+        "hardhat": "^2.22.13",
+        "hardhat-contract-sizer": "^2.10.0",
+        "joi": "^17.13.3",
+        "prettier-plugin-solidity": "^1.4.1"
+    },
+    "dependencies": {
+        "@openzeppelin/contracts-upgradeable": "^5.1.0",
+        "@openzeppelin/hardhat-upgrades": "^3.5.0"
+    }
+}

@@ -1,0 +1,25 @@
+testMode: assertion
+testLimit: 10000
+cryticArgs:
+  - --compile-force-framework
+  - hardhat
+  - --solc-remaps
+  - "@openzeppelin/=/share/node_modules/@openzeppelin/"
+deployer: "0x10000"
+sender:
+  - "0x10000"
+  - "0x20000"
+  - "0x30000"
+corpusDir: crytic-corpus
+stopOnFail: true
+filterBlacklist: false
+filterFunctions:
+  - FuzzVerifier.testRecoverSigner(bytes32,bytes)
+  - FuzzRoyaltySplitter.testRegisterCollectionRoyalty(address,(address,uint96)[])
+  - FuzzRoyaltySplitter.testRegisterTokenRoyalty(address,uint256,(address,uint96)[])
+  - FuzzNFTFactory.testCreateCollection((uint256,uint256,string,string,uint256,(address,bytes32,uint256)[]),bytes)
+  - FuzzNFTFactory.testMintItem((uint256,uint256,string,string,uint256,(address,bytes32,uint256)[]),(uint256,uint256,uint256,uint256,uint256,address,string,(address,uint96)[],(address,bytes32,uint256)[]),bytes)
+  - FuzzNFTFactory.testMintItemUnsigned((uint256,uint256,string,string,uint256,(address,bytes32,uint256)[]),(uint256,uint256,uint256,uint256,uint256,address,string,(address,uint96)[],(address,bytes32,uint256)[]),address,bytes)
+  - FuzzIncinerator.testBurnItems(uint256,uint256,uint256,(address,uint256)[],(address,bytes32,uint256)[],bytes)
+  - FuzzIncinerator.testPermitBurnItems(uint256,uint256,uint256,(address,uint256)[],(address,bytes32,uint256)[],(bytes32,bytes),bytes)
+  - FuzzPayment.testPay(uint256,uint256,uint256,(address,bytes32,uint256)[],bytes)

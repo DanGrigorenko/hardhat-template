@@ -2,7 +2,7 @@
 
 ## Sepolia Testnet (Dev)
 
-### Lock Contract
+### BBToken Contract
 
 -   Contract address: [](https://sepolia.etherscan.io/address/)
 -   Owner address: [](https://sepolia.etherscan.io/address/)

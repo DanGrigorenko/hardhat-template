@@ -2,7 +2,7 @@
 
 ## Ethereum Mainnet
 
-### Lock Contract
+### BBToken Contract
 
 -   Contract address: [](https://etherscan.io/address/)
 -   Owner address: [](https://etherscan.io/address/)
